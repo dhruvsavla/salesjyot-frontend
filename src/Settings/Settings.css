@@ -1,0 +1,11 @@
+.companySettingHeader {
+    width: 100%;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.companySettingForm {
+    margin-left: 13%;
+    margin-right: 13%;
+}
+

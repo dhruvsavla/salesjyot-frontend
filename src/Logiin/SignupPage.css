@@ -1,0 +1,11 @@
+.mt-5 {
+    background-color: lightgray;
+    height: 100%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.mt-5 h2 {
+    text-align: center;
+}
+

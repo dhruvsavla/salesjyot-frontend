@@ -1,0 +1,133 @@
+.customer-master {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.upper-half {
+  height: 50vh; /* Ensure upper half takes 50% of the viewport height */
+  background-color: #efeef1;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.content-with-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure it takes the full height of the container */
+}
+
+.main-content {
+  flex: 1;
+  padding-right: 60px; /* Adjust padding to accommodate sidebar */
+}
+
+.lower-half {
+  position: absolute;
+  top: 50vh; /* Start from 50% of the viewport height */
+  height: 50vh; /* Ensure it takes the remaining 50% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure it spans the full width of the container */
+  background-color: #edf1f4;
+}
+
+.tabs {
+  display: flex;
+  background-color: rgba(211, 211, 211, 0.2);
+  margin-left: 4.2%;
+}
+
+.tabs a {
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+  border: 1px solid rgba(211, 211, 211, 0.8); /* Add border to each tab */
+}
+
+.tabs a:first-child {
+  border-left: 1px solid white; /* Add left border to the first tab */
+}
+
+.tabs a:last-child {
+  border-right: 1px solid white; /* Add right border to the last tab */
+}
+
+.tabs .active-tab {
+  background-color: rgba(211, 211, 211, 0.353);
+}
+
+.tab-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  color: black;
+  height: 50px; /* Adjust height as needed */
+  line-height: 50px; /* Center text vertically */
+  margin-bottom: 2%;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Small devices (600px and below) */
+@media (max-width: 600px) {
+  .customer-master {
+    flex-direction: column;
+  }
+
+  .content-with-sidebar {
+    flex-direction: column;
+  }
+
+  .main-content {
+    padding-right: 0; /* Remove padding on small screens */
+  }
+
+  .tabs a {
+    padding: 5px 10px; /* Reduce padding for smaller screens */
+  }
+
+  .header {
+    height: 40px; /* Adjust height */
+    line-height: 40px; /* Center text vertically */
+  }
+}
+
+/* Medium devices (600px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .main-content {
+    padding-right: 30px; /* Adjust padding */
+  }
+
+  .tabs a {
+    padding: 8px 16px; /* Adjust padding */
+  }
+
+  .header {
+    height: 45px; /* Adjust height */
+    line-height: 45px; /* Center text vertically */
+  }
+}
+
+/* Large devices (1024px and above) */
+@media (min-width: 1025px) {
+  .main-content {
+    padding-right: 60px; /* Default padding */
+  }
+
+  .tabs a {
+    padding: 10px 20px; /* Default padding */
+  }
+
+  .header {
+    height: 50px; /* Default height */
+    line-height: 50px; /* Center text vertically */
+  }
+}
